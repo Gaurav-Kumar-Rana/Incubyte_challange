@@ -1,0 +1,14 @@
+{
+  "name": "add-string",
+  "version": "1.0.0",
+  "description": "//Initializing the app by npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
