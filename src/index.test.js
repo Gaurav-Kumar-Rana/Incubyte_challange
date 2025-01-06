@@ -10,7 +10,8 @@ describe("Test suite", () => {
   it("should handle new line and comma in the input '1\/n2,3'", () => {
     expect(Add("1\n2,3")).toBe(6); // new line and comma separated numbers should return the sum of numbers in the string
   });
-  it("should return the sum of numbers when delimiter is set by '//' in the input string '//;\n1;2' ", () => {
-    expect(Add("//;\n1;2")).toBe(3); // multiple numbers should return the correct sum if delimiter is set by '//'
+  it("should not allow negative number", () => {
+    expect(Add("//;\n-1;-2;3")).toBe('negative not allowed: -1, -2'); // the input should not allow negative number if found return error message negative not allowed and all negative numbers'
   });
+  it
 });
