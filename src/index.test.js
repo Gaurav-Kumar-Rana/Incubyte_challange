@@ -1,5 +1,5 @@
 describe("Test suite", () => {
   it("should pass", () => {
-    expect(true).toBe(true);
+    expect(Add("")).toBe(0); // empty string should return 0
   });
 });
