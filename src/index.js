@@ -11,8 +11,13 @@ const Add = (str) => {
   }
 
   const numbers = str.split(delimiters).map(Number);
-  return numbers.reduce((a, b) => a + b, 0);
+  const negativeNumbers = numbers.filter(num => num < 0);
 
+  if(negativeNumbers.length > 0) {
+    return 'negative not allowed: ' + negativeNumbers.join(", ");
+  } 
+
+  return numbers.reduce((a, b) => a + b, 0);
 };
 
 module.exports = Add;
