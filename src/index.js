@@ -2,10 +2,11 @@ const Add = (str) => {
   if (str === "") return 0;
 
   let  delimiters = /,|\n/;
+  let customDelimiter = '';
 
   if (str.startsWith("//")) {
     const delimiterEndIndex = str.indexOf("\n");
-    const customDelimiter = str.substring(2, delimiterEndIndex);
+    customDelimiter = str.substring(2, delimiterEndIndex);
     delimiters = new RegExp(`[${customDelimiter}]`);
     str = str.substring(delimiterEndIndex + 1);
   }
@@ -17,6 +18,9 @@ const Add = (str) => {
     return 'negative not allowed: ' + negativeNumbers.join(", ");
   } 
 
+  if(customDelimiter == '*'){
+    return numbers.reduce((a, b) => a * b, 1);
+  }
   return numbers.reduce((a, b) => a + b, 0);
 };
 

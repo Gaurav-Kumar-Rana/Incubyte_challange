@@ -13,5 +13,10 @@ describe("Test suite", () => {
   it("should not allow negative number", () => {
     expect(Add("//;\n-1;-2;3")).toBe('negative not allowed: -1, -2'); // the input should not allow negative number if found return error message negative not allowed and all negative numbers'
   });
-  it
+});
+
+describe("Test suit 2",()=>{
+  it("should return multiplication for '//*\n1*7*3' as 6", ()=>{
+    expect(Add("//*\n1*7*3")).toBe(21);
+  })
 });
